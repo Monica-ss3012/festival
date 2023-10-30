@@ -1,7 +1,6 @@
 <?php
 include 'config.php';
 if (isset($_POST['bEnviar'])) {
-
 }
 ?>
 <!DOCTYPE html>
@@ -60,6 +59,7 @@ if (isset($_POST['bEnviar'])) {
 	<script type="text/javascript" src="assets/datatables/js/buttons.html5.js"></script>
 	<script type="text/javascript" src="assets/datatables/js/buttons.print.js"></script>
 
+	<!-- Botones de descarga y copia -->
 	<script type="text/javascript">
 		$(document).ready(function () {
 			$('#tableresponsive').DataTable({
@@ -101,13 +101,15 @@ if (isset($_POST['bEnviar'])) {
 			});
 		});
 	</script>
+	<!-- Botones de descarga y copia -->
 </head>
 
 <body>
+	<!-- Inicio tabla -->
 	<main class="table-container">
-	<a href="./" class="botonlist"><i class="fas fa-undo-alt botonlist-icon"></i></a>
+		<a href="./" class="botonlist"><i class="fas fa-undo-alt botonlist-icon"></i></a>
 		<table id="tableresponsive" style="width:100%;">
-		<h1 class="title text-center"><em>Usuarios Registrados<em></h1>
+			<h1 class="title text-center"><em>Usuarios Registrados<em></h1>
 			<thead>
 				<td>ID</td>
 				<td>Nombre</td>
@@ -119,7 +121,7 @@ if (isset($_POST['bEnviar'])) {
 			<?php
 			$administrador = "SELECT * FROM usuarios";
 			$result = mysqli_query($conn, $administrador);
-
+			// Mostrar datos registrados
 			while ($mostrar = mysqli_fetch_array($result)) {
 				?>
 				<tbody>
@@ -144,8 +146,11 @@ if (isset($_POST['bEnviar'])) {
 				</tbody>
 				<?php
 			}
+			// Mostrar datos registrados
 			?>
 		</table>
 	</main>
+	<!-- Inicio tabla -->
 </body>
+
 </html>

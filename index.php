@@ -1,6 +1,6 @@
 <?php
 include 'config.php';
-include 'registro.php';
+// include 'registro.php';
 ?>
 <!DOCTYPE html>
 <html lang="es">
@@ -30,9 +30,9 @@ include 'registro.php';
 <body>
     <!-- //inicio formulario -->
     <div class="contact-form">
-        <form  action="" class="form" id="formulario" method="post" enctype="application/x-www-form-urlencoded">
+        <form  action="registro.php" class="form" id="formulario" method="POST">
             <div class="container">
-                <h2 >Formulario de registro</h2><br>
+                <h2><em>Formulario de registro</em></h2><br>
                 <div class="form_registro">
                     <label>
                         <em class="fa fa-user">Nombres</em>
@@ -56,7 +56,7 @@ include 'registro.php';
                     <br>
                     <label id="tip_bolet">
                         <em>Tipo de boleto</em>
-                        <select name="boletos" id="boleto">
+                        <select name="boletos" id="boleto" class="dataTables_wrapper .dataTables_length select">
                             <option value="vip">VIP</option>
                             <option value="general">General</option>
                         </select><br>
@@ -71,5 +71,6 @@ include 'registro.php';
     </div>
     <script src="assets/js/validation.js"></script>
     <!-- fin de formulario -->
+
 </body>
 </html>
